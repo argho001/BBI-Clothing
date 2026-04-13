@@ -201,6 +201,9 @@ const FooterExpanded = () => {
                 {item}
               </span>
             ))}
+            <Link to="/admin" className="text-xs font-bold text-slate-600 transition-colors hover:text-primary">
+              Admin
+            </Link>
           </div>
         </div>
       </div>
