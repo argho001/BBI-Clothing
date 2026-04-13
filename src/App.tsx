@@ -36,6 +36,11 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        {/* ── Admin Panel (its own layout, no navbar) ── */}
+        <Route path="/admin" element={<AdminLayout><Dashboard /></AdminLayout>} />
+        <Route path="/admin/orders" element={<AdminLayout><Orders /></AdminLayout>} />
+        <Route path="/admin/products" element={<AdminLayout><AdminProducts /></AdminLayout>} />
+
         {/* ── Public Store (wrapped in main Layout) ───── */}
         <Route
           path="/*"
@@ -58,11 +63,6 @@ const AnimatedRoutes = () => {
             </Layout>
           }
         />
-
-        {/* ── Admin Panel (its own layout, no navbar) ── */}
-        <Route path="/admin" element={<AdminLayout><Dashboard /></AdminLayout>} />
-        <Route path="/admin/orders" element={<AdminLayout><Orders /></AdminLayout>} />
-        <Route path="/admin/products" element={<AdminLayout><AdminProducts /></AdminLayout>} />
       </Routes>
     </AnimatePresence>
   );

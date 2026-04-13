@@ -43,8 +43,8 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="flex min-h-screen items-center justify-center bg-slate-950 px-4">
         <div className="w-full max-w-md">
           <div className="mb-10 text-center">
-            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/20 text-primary mx-auto">
-              <BarChart3 className="h-9 w-9" />
+            <div className="mb-4 flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg mx-auto p-2">
+              <img src="/assets/logo.jpg" alt="BBI Logo" className="h-full w-full object-contain" />
             </div>
             <h1 className="text-3xl font-black text-white">Admin Panel</h1>
             <p className="mt-2 text-slate-400 font-medium">BBI Clothing ব্যবস্থাপনা</p>
@@ -78,8 +78,10 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
       {/* ── Sidebar ─────────────────────────────────────────── */}
       <aside className={`fixed inset-y-0 left-0 z-50 flex w-72 flex-col bg-slate-950 shadow-2xl transition-transform duration-300 lg:translate-x-0 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
         {/* Logo */}
-        <div className="flex h-20 items-center gap-4 border-b border-white/10 px-6">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white font-black text-lg">B</div>
+        <div className="flex h-10 items-center gap-4 border-b border-white/10 px-6">
+          <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white p-1">
+            <img src="/assets/logo.jpg" alt="BBI Logo" className="h-full w-full object-contain" />
+          </div>
           <div>
             <p className="font-black text-white text-lg leading-none">BBI Admin</p>
             <p className="text-xs text-slate-400 font-medium">ব্যবস্থাপনা প্যানেল</p>
